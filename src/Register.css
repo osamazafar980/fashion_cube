@@ -1,0 +1,77 @@
+.register {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #29A7DF;
+  }
+  .registerL{
+    width: 40%;
+    background-color: #0A2A66;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    margin-left:7% ;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  .registerL h1{
+    font-weight: 400;
+  }
+  .registerL h4{
+    font-weight: 300;
+    width: 60%;
+    flex-wrap: wrap;
+  }
+  .registerR{
+    width: 40%;
+    margin-right: 10%;
+    height: 100%;
+    background-color: #FAFDFE;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .registerBox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+    .register__container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  .register__textBox {
+    padding: 10px;
+    font-size: 18px;
+    width: 70%;
+    color: #29A7DF;
+  }
+  .register__btn {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    color: #21242C;
+    background-color: #E9ECED;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #21242C;
+    border-radius: 3px;
+    width: 70%;
+  }
+  .register__btn:hover{
+    color: #29A7DF;
+    border: 1px solid #29A7DF;
+    border-radius: 3px;
+  }
