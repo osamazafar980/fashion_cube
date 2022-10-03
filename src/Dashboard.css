@@ -259,8 +259,8 @@
     flex-direction: row;
     align-items: center;
     padding: 2% 4% 2% 4%;
-    background-color: black;
-    color:white;
+    background-color: white;
+    color:black;
     margin-top: 5%
 }
 #bankingLogos{
@@ -272,13 +272,15 @@
 }
 #bankingLogos img{
     width: auto;
-    background-color: white;
     height: 50px;
 }
 #bankingInfo{
+    display: flex;
     width: 30%;
     margin-left: 5%;
     margin-right: 5%;
+    align-items: center;
+    justify-content: center;
 }
 #SocialLogos{
     width: 25%;
@@ -289,6 +291,5 @@
 }
 #SocialLogos img{
     width: auto;
-    background-color: white;
     height: 50px;
 }

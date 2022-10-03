@@ -169,7 +169,21 @@ export default function Profile() {
                 >Add New Product</p>
         </div>
         <div id='footer'>
-            <p>All rights are reserved by Fashion Cube. 2022</p>
+            <div id="bankingLogos">
+                <img src='https://princecard.com/wp-content/uploads/2020/08/ebuy-easypaisa-logo.png'/>
+                <img src='https://seeklogo.com/images/J/jazz-cash-logo-829841352F-seeklogo.com.jpg'/>
+                <img src='https://www.kindpng.com/picc/m/35-351793_credit-or-debit-card-mastercard-logo-visa-card.png'/>
+                <img src="https://st2.depositphotos.com/1031343/6862/v/950/depositphotos_68629709-stock-illustration-cash-on-delivery-label-sticker.jpg"/>
+            </div>
+            <div id="bankingInfo">
+                <p>Easypaisa & Jazz Cash Account: 0300-9614255</p>
+            </div>
+            <div id="SocialLogos">
+                <img src="https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-facebook-512.png"/>
+                <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png"/>
+                <img src="https://cdn-icons-png.flaticon.com/512/81/81609.png"/>
+                <img src="https://cdn-icons-png.flaticon.com/512/48/48968.png"/>
+            </div>
         </div>
     </div>
   )
