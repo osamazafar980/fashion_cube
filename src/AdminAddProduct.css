@@ -1,0 +1,35 @@
+#newPSizes{
+    display:flex;
+    width:40%;
+}
+
+#adminBoxText{
+    width: fit-content;
+    padding: 2% 4% 2% 4%;
+    border: 1px solid white;
+    background-color: #DB7C26;
+    margin-left: 0px;
+    margin-right:10%;
+}
+#adminBoxText:hover{
+    background-color: lawngreen;
+    cursor: pointer;
+}
+#adminBoxSelected{
+    width: fit-content;
+    padding: 2% 4% 2% 4%;
+    border: 1px solid white;
+    background-color: lawngreen;
+    margin-left: 0px;
+    margin-right:10%;
+}
+#adminBoxSelected:hover{
+    background-color: #DB7C26;
+    cursor: pointer;
+}
+#adminName{
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+    margin-right: 20%;
+}

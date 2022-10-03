@@ -9,7 +9,7 @@ async function login(email,password){
   }else if (password==""){
     alert("Password Required");
   }else{
-      const response = await fetch('http://localhost:1337/api/login',{
+      const response = await fetch('http://localhost:1337/api/adminLogin',{
           method:'POST',
           headers:{
               'Content-Type' : 'application/json',
@@ -26,7 +26,7 @@ async function login(email,password){
   }
 }
 
-function Login() {
+function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -34,8 +34,8 @@ function Login() {
     <div className="login">
       <div className="loginBox">
       <div className="loginL">
-        <h1>Wellcome To Fashion Cube</h1>
-        <h4>Good to see you again! Please Login.</h4>
+        <h1>Wellcome To Admin Pannel</h1>
+        <h4>Wellcome Administrator! Please Login.</h4>
         <h4>By logging into Fashion Cube store, you agree to our Terms of use and Privacy Policy.</h4>
       </div>
       <div className="loginR">
@@ -66,10 +66,9 @@ function Login() {
             }else{  
             const data = await login(email, password)
             if(data.status == 'OK'){
-              navigate('/dashboard/'+data.username+'/'+data.email)
+              navigate('/adminpanel/'+data.username+'/'+data.email)
             }else{
               alert('Wrong Credentials')
-              console.log(data)
             }
             }
           }}
@@ -78,16 +77,7 @@ function Login() {
         </button>
         
         <div className="forgotPass">
-          <p onClick={()=>{navigate("/adminLogin")}}>Login As Administrator</p>
-        </div>
-        
-        
-        <div className="orDivider">
-          <p >OR</p>
-        </div>
-
-        <div className="forgotPass">
-          <p onClick={()=>{navigate("/")}}>Create an account</p>
+          <p onClick={()=>{navigate("/")}}>Client Registeration</p>
         </div>
       </div>
 
@@ -96,4 +86,4 @@ function Login() {
       </div>
   );
 }
-export default Login;
+export default AdminLogin;

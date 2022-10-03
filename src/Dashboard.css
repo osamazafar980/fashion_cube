@@ -1,0 +1,294 @@
+.dashboard{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #29A7DF;
+  align-items: center;
+}
+.navBarMain{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    padding: 10px 0px 10px 0px;
+    align-self: center;
+    justify-content: center;
+    color: #29A7DF;
+    align-items: center;
+}
+.navBar{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    padding: 10px 0px 10px 0px;
+    align-self: center;
+    justify-content: center;
+    color: #29A7DF;
+    align-items: center;
+}
+.navBarMain h1{
+    width: 80%;
+    text-align: center;
+}
+#navMainProfileButton{
+    font-weight: 100;
+    margin-right: 5%;
+    background-color: #DB7C26;
+    padding: 1% 2% 1% 2% ;
+    color: white;
+    width: 10%;
+    text-align: center
+}
+#navProfileButton:hover{
+    background-color: #F7B538;
+    cursor: pointer;
+}
+
+.dashBody{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.dashL{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #FFFFFF60;
+}
+.dashL p{
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 100;
+}
+#filterContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#filterContainer p{
+    text-align: left;
+    margin-left: 5%;
+}
+#filterBox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+#filterBoxText{
+    width: fit-content;
+    padding: 2% 4% 2% 4%;
+    border: 1px solid #FFFFFF60;
+    background-color: #DB7C26;
+    margin-left: 0px;
+}
+#filterBoxText:hover{
+    background-color: lawngreen;
+    cursor: pointer;
+}
+#filterBoxSelected{
+    width: fit-content;
+    padding: 2% 4% 2% 4%;
+    border: 1px solid #FFFFFF60;
+    background-color: lawngreen;
+    margin-left: 0px;
+}
+#filterBoxSelected:hover{
+    background-color: #DB7C26;
+    cursor: pointer;
+}
+#filterButtonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#FiltterButton{
+    font-weight: 100;
+    margin-right: 5%;
+    background-color: #DB7C26;
+    padding: 2% 4% 2% 4% ;
+    color: white;
+    width: fit-content;
+    text-align: center
+}
+#FiltterButton:hover{
+    background-color: #F7B538;
+    cursor: pointer;
+}
+.dashR{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+}
+#dashRHead{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-top: 1px solid #FFFFFF60;
+    border-bottom: 1px solid #FFFFFF60;
+    margin-top: 1%;
+    justify-content: space-between;
+    align-items: center;
+}
+#dashRHeadButtons{
+    display:flex;
+    flex-direction:row;
+    width:50%;
+    justify-content:space-around;
+}
+#dashRHeadText{
+    font-weight: 100;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: italic;
+}
+#dashRCartButton{
+    font-weight: 100;
+    margin-right: 25%;
+    background-color: #DB7C26;
+    padding: 1% 2% 1% 2% ;
+}
+#dashRCartButton:hover{
+    background-color: #F7B538;
+    cursor: pointer;
+}
+#pType{
+    font-weight: 100;
+    font-size: 30px;
+    border-top:1px solid #FFFFFF60;
+    border-bottom:1px solid #FFFFFF60;
+    padding-top:1px solid white;
+    padding-bottom:1px solid white;
+    
+}
+#pTypeButton{
+    font-weight: 100;
+    font-size: 30px;
+    margin-right: 25px;
+    margin-left: 25px;
+    border:1px solid #FFFFFF60;
+    padding:5px 20px 5px 20px;
+}
+#pTypeButton:hover{
+    cursor: pointer;
+}
+#pType:hover{
+    cursor: pointer;
+}
+#pImageContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#dashRItem{
+    border: 1px solid #FFFFFF60;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    padding:1% 1% 1% 1%;
+    cursor: pointer;
+    text-overflow: wrap;
+}
+#dashRItem:hover{
+    background-color: #00000060;
+    border: 2px solid #00000030
+}
+#dashRItem p{
+    margin: 0px;
+    padding: 0px;
+}
+#dashRItem img{
+    height: 250px;
+}
+#dashRBody{
+    display: flex;
+    flex-direction: row;
+}
+#pSizes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#dashRCat{
+    display: flex;   
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#pAddCartButton{
+    background-color: #09FF00;
+    width: fit-content;
+    padding: 2% 15% 2% 15%;
+    margin-top: 5%;
+}
+#pAddCartButton:hover{
+    border: 1px solid #FFFFFF60;
+}
+#pRemoveCartButton{
+    background-color: red;
+    width: fit-content;
+    padding: 2% 15% 2% 15%;
+    margin-top: 5%;
+}
+#pRemoveCartButton:hover{
+    border: 1px solid #FFFFFF60;
+}
+#hideBox{
+    display: none;
+}
+#sliderImages{
+    width: 100%;
+    height: 500px;
+}
+#imgLogo{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-left: 20%;
+}
+
+#footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2% 4% 2% 4%;
+    background-color: black;
+    color:white;
+    margin-top: 5%
+}
+#bankingLogos{
+    width: 25%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#bankingLogos img{
+    width: auto;
+    background-color: white;
+    height: 50px;
+}
+#bankingInfo{
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#SocialLogos{
+    width: 25%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#SocialLogos img{
+    width: auto;
+    background-color: white;
+    height: 50px;
+}

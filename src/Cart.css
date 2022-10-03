@@ -1,0 +1,77 @@
+.cartBody{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
+}
+#productItem{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    width: 100%;
+    align-items: center;
+    margin-top: 1%;
+}
+#productItemImg{
+    width: 10%;
+    height: 10%;
+    margin-left: 10%;
+}
+#cPName{
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+    margin-left: 4%;
+}
+#cPPrice{
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+    margin-left: 4%;
+}
+#cTotal{
+    display: flex;
+    flex-direction: row-reverse;
+    border: 1px solid white;
+    width: 100%;
+    margin-top: 1%;
+    align-items: center;
+}
+#cTotalValue{
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    margin-right: 4%;
+}
+#cCheckOut{
+    margin-right: 5%;
+    background-color: yellow;
+    padding: 1% 4% 1% 4%;
+}
+#cCheckOut:hover{
+    
+    cursor: pointer;
+}
+#cAddress{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    margin-top: 1%;
+    align-items: center;
+}
+#filled-basic{
+    color: black;
+}
+#changeStatusButton{
+    font-weight: 100;
+    margin-left: 10%;
+    background-color: #DB7C26;
+    padding: 1% 2% 1% 2% ;
+}
+#changeStatusButton:hover{
+    background-color: #F7B538;
+    cursor: pointer;
+}
+#hideDiv{
+    display:none;
+}
