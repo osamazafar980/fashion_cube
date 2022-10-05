@@ -32,6 +32,14 @@ function Item(props)
         </Paper>
     )
 }
+function LItem(props)
+{
+    return (
+        <Paper>
+            <img id="lsliderImages" src={props.item.img} alt={props.item.alt}/>
+        </Paper>
+    )
+}
 export default function Dashboard() {
   const [products,setProducts] = useState([]);
   const [allProducts,setAllProducts] = useState([]);
@@ -70,9 +78,24 @@ export default function Dashboard() {
         alt: "Summer Sale!"
     }
     ]
+    var leftBannar = [
+       
+        {
+            img:"https://i.pinimg.com/564x/ff/9e/e9/ff9ee950486cc1df5af2b0d741c697e2.jpg",
+            alt: "Winter Sale!"
+        },
+        {
+            img:"https://i.pinimg.com/564x/1a/b3/f1/1ab3f1ea87baf95861a77e02ecfd5684.jpg",
+            alt: "Winter Sale!"
+        },
+        {
+            img:"https://i.pinimg.com/564x/45/bb/60/45bb60dd04282d6b2c52e1ff8e9fbb93.jpg",
+            alt: "Winter Sale!"
+        },
+    ]
     var catImagesLinks=[
-        "https://media.istockphoto.com/vectors/shirt-icon-vector-id874045548?k=20&m=874045548&s=612x612&w=0&h=EXMZ0NNv89qeaqIMJ1Sox2yD3NuA2zYHVabxjOMB7E0=",
-        "https://cdn.dribbble.com/users/2382528/screenshots/7454842/shot-cropped-1570857754324.png",
+        "https://img.freepik.com/premium-psd/tshirt-mockup-template-design_68185-498.jpg?w=360",
+        "https://static6.depositphotos.com/1000291/663/i/450/depositphotos_6634332-stock-photo-jeans-clothes-on-shelf-in.jpg",
         "https://t4.ftcdn.net/jpg/04/60/99/63/360_F_460996349_bIzl423o41oLdi5hJIgNT3OD8SViuo9i.jpg",
         "https://i0.wp.com/www.lasercutjewelry.net/wp-content/uploads/2013/10/keychain-2.jpg?fit=3600%2C2700&ssl=1",
         "https://ae01.alicdn.com/kf/H21c4ce82ad964b6a901270d13bc61fc0Z/Forsining-3d-Logo-Design-Hollow-Engraving-Black-Gold-Case-Leather-Skeleton-Mechanical-Watches-Men-Luxury-Brand.jpg_Q90.jpg_.webp",
@@ -218,6 +241,13 @@ export default function Dashboard() {
                         setProducts(allProducts)
                     }}
                 >Reset Filter</p>
+                </div>
+                <div id="leftBannar">
+                <Carousel>
+                    {
+                        leftBannar.map( (item, i) => <LItem key={i} item={item} /> )
+                    }
+                </Carousel>
                 </div>
                 
             </div>
