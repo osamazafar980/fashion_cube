@@ -39,37 +39,45 @@ export default function Dashboard() {
   const [limit,setLimit] = useState('');
   const [sizeFilter,setSizeFilter] = useState([]);
   const [openTypes,setOpenTypes] = useState([]);
+  const [dashL,setDashL] = useState(false);
   const navigate = useNavigate();
   var {username,email} = useParams();
-  var types = ['Shirts','Pants','Shoes']
+  var types = ['Shirts','Pants','Shoes',"Key Chains","Watches","Glasses"]
 
   var items = [
     {
-        img: "https://previews.123rf.com/images/igorvkv/igorvkv1801/igorvkv180100025/93528968-winter-sale-banner-template-design-vector-illustration.jpg",
+        img: "https://img.freepik.com/free-psd/winter-sale-banner-design-template_23-2149123167.jpg?w=2000",
         alt: "Winter Sale!"
     },
     {
-        img: "https://cdn.pixabay.com/photo/2018/01/12/13/01/discount-3078216_960_720.jpg",
+        img: "https://static.vecteezy.com/system/resources/previews/004/563/903/original/winter-sale-background-special-offer-banner-background-for-business-and-advertising-illustration-free-vector.jpg",
         alt: "Winter Sale!"
     },
     {
-        img: "https://ybooy.com/wp-content/uploads/2018/10/Home-ybooy-banner-Kids.jpg",
+        img: "https://img.freepik.com/free-psd/banner-template-winter-sale-with-woman-snowflakes_23-2148808315.jpg?w=2000",
         alt: "Winter Sale!"
     },
     {
-        img: "https://img.freepik.com/free-psd/summer-sale-70-discount_23-2148476960.jpg",
+        img: "https://img.freepik.com/free-vector/end-season-summer-sale_23-2148607742.jpg?w=2000",
         alt: "Winter Sale!"
     },
     {
-        img: "https://www.creativefabrica.com/wp-content/uploads/2020/06/05/Summer-sale-banner-design-Graphics-4284812-1-580x365.jpg",
+        img: "https://img.freepik.com/free-vector/flat-summer-sale-horizontal-banner-template-with-photo_23-2148929588.jpg?w=2000",
         alt: "Summer Sale!"
     },
     {
-        img: "https://image.shutterstock.com/image-vector/hot-summer-sale-template-banner-260nw-419412433.jpg",
+        img: "https://img.freepik.com/free-vector/flat-summer-sale-horizontal-banner-template_23-2149388320.jpg?w=2000",
         alt: "Summer Sale!"
     }
     ]
-
+    var catImagesLinks=[
+        "https://media.istockphoto.com/vectors/shirt-icon-vector-id874045548?k=20&m=874045548&s=612x612&w=0&h=EXMZ0NNv89qeaqIMJ1Sox2yD3NuA2zYHVabxjOMB7E0=",
+        "https://cdn.dribbble.com/users/2382528/screenshots/7454842/shot-cropped-1570857754324.png",
+        "https://t4.ftcdn.net/jpg/04/60/99/63/360_F_460996349_bIzl423o41oLdi5hJIgNT3OD8SViuo9i.jpg",
+        "https://i0.wp.com/www.lasercutjewelry.net/wp-content/uploads/2013/10/keychain-2.jpg?fit=3600%2C2700&ssl=1",
+        "https://ae01.alicdn.com/kf/H21c4ce82ad964b6a901270d13bc61fc0Z/Forsining-3d-Logo-Design-Hollow-Engraving-Black-Gold-Case-Leather-Skeleton-Mechanical-Watches-Men-Luxury-Brand.jpg_Q90.jpg_.webp",
+        "https://www.creativefabrica.com/wp-content/uploads/2018/11/Glasses-Logo-by-Friendesign-Acongraphic-1.jpg"
+    ]
   useEffect(()=>{
         fetch('http://localhost:1337/api/getAllProducts',{
             method:'POST',
@@ -118,12 +126,21 @@ export default function Dashboard() {
             <h1>Fashion Cube Store</h1>
             <p id='navMainProfileButton'
                     onClick={async ()=>{
-                        navigate('/profile/'+username+'/'+email)
+                        if(email==undefined){
+                            navigate('/login')
+                        }else{
+                            navigate('/profile/'+username+'/'+email)
+                        }
                     }}
-                >Profile Section</p>
+                >{email==undefined?"Login":"Profile Section"}</p>
         </div>
         <div className='dashBody'>
             <div className='dashL'>
+            <p id='dashRCartButton'
+                    onClick={async ()=>{
+                        navigate('/cart/'+username+'/'+email+'/'+JSON.stringify(cart))
+                    }}
+                >Open Cart</p>
                 <p>Filters</p>
                 <div id='filterContainer'>
                     <p>Select Size: </p>
@@ -205,14 +222,7 @@ export default function Dashboard() {
                 
             </div>
             <div className='dashR'>
-                <div id='dashRHead'>
-                <p id='dashRHeadText'>Popular Categories</p>
-                <p id='dashRCartButton'
-                    onClick={async ()=>{
-                        navigate('/cart/'+username+'/'+email+'/'+JSON.stringify(cart))
-                    }}
-                >Open Cart</p>
-                </div>
+                
                 <Carousel>
                     {
                         items.map( (item, i) => <Item key={i} item={item} /> )
@@ -222,7 +232,7 @@ export default function Dashboard() {
                 {types.map(function(item, i){
                 return(
                 <div key = {i}>
-                    <p id={openTypes.length==0?"pTypeButton":(openTypes.includes(item))?"pType":"hideBox"}
+                    <div id={openTypes.length==0?"pTypeButton":(openTypes.includes(item))?"pType":"hideBox"}
                         onClick={()=>{
                             if(openTypes.includes(item)){
                                 setOpenTypes([])
@@ -230,7 +240,15 @@ export default function Dashboard() {
                                 setOpenTypes([item])
                             }
                         }}
-                    >{item}</p>
+                    >
+                        <img
+                            id={openTypes.length==0?"pTypeButton":(openTypes.includes(item))?"hideBox":"hideBox"}
+                            src={catImagesLinks[i]}
+                        />
+                        <p
+                            id = "catTitle"
+                        >{item}</p>
+                    </div>
                     <div id={openTypes.includes(item)?'dashRCat':'hideBox'}>
                     {
                         products.map(function(product, k){

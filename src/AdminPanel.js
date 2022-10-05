@@ -194,6 +194,7 @@ export default function AdminPanel() {
                                 }}>
                                 <div id="pImageContainer">
                                 <img
+                                    id="pImageContainerIMG"
                                     src={product.url}
                                     alt={product.name}
                                 />

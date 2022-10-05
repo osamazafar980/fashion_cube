@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
         <Routes>
-          <Route exact path="/" element={<Register />} />
+          <Route exact path="/" element={<Dashboard />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/dashboard/:username/:email" element={<Dashboard />} />
           <Route exact path="/cart/:username/:email/:cData" element={<Cart />} />

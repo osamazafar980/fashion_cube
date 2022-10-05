@@ -150,7 +150,9 @@ export default function Profile() {
             </div>
             <div id='newPSizes'>
                 <p id='adminName'>Types: </p>
-                {['Shirts','Pants','Shoes'].map(function(type, q){
+            <div id='typesBox'>
+
+                {['Shirts','Pants','Shoes',"Key Chains","Watches","Glasses"].map(function(type, q){
                 return(
                     <p id={type==typeFilter?'adminBoxSelected':'adminBoxText'}
                             onClick={()=>{
@@ -162,6 +164,8 @@ export default function Profile() {
                             }}
                         >{type}</p>
                 )})}
+
+            </div>
             </div>
                             
             <p id='cCheckOut'

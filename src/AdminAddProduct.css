@@ -1,8 +1,15 @@
 #newPSizes{
     display:flex;
     width:40%;
-}
+    flex-direction: row;
 
+}
+#typesBox{
+    display:flex;
+    width:80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 #adminBoxText{
     width: fit-content;
     padding: 2% 4% 2% 4%;
