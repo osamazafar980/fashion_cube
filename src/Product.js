@@ -75,7 +75,12 @@ export default function Product() {
     return (
     <div className='prod'>
         <div className='navBar'>
-            <h1>Fashion Cube Store</h1>
+            <h1
+            onClick={()=>{
+                navigate('/')
+            }}
+            >
+            Fashion Cube Store</h1>
         </div>
         <div className='productBody'>
             {   

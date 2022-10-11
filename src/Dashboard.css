@@ -33,9 +33,9 @@
 #navMainProfileButton{
     font-weight: 700;
     margin-right: 5%;
-    background-color: #f68a15;
+    background-color: #153084;
+color:white;
     padding: 1% 2% 1% 2% ;
-    color: black;
     width: 10%;
     text-align: center
 }
@@ -78,7 +78,8 @@
     width: fit-content;
     padding: 2% 4% 2% 4%;
     border: 1px solid #FFFFFF60;
-    background-color: #f68a15;
+    background-color: #153084;
+color:white;
     margin-left: 0px;
     font-weight: 400;
 }
@@ -94,7 +95,8 @@
     margin-left: 0px;
 }
 #filterBoxSelected:hover{
-    background-color: #f68a15;
+    background-color: #153084;
+color:white;
     cursor: pointer;
 }
 #filterButtonContainer{
@@ -105,9 +107,9 @@
 #FiltterButton{
     font-weight: 500;
     margin-right: 5%;
-    background-color: #f68a15;
+    background-color: #153084;
+color:white;
     padding: 2% 4% 2% 4% ;
-    color: black;
     width: fit-content;
     text-align: center
 }
@@ -146,7 +148,8 @@
 #dashRCartButton{
     font-weight: 400;
     margin-left: 25%;
-    background-color: #f68a15;
+    background-color: #153084;
+color:white;
     padding: 1% 2% 1% 2% ;
     width: 50%;
     font-size: 18px;

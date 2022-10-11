@@ -68,7 +68,11 @@ export default function Cart() {
     return (
     <div className='cart'>
         <div className='navBar'>
-            <h1>Fashion Cube Store</h1>
+            <h1
+            onClick={()=>{
+                navigate('/')
+            }}>
+            Fashion Cube Store</h1>
         </div>
         <div className='cartBody'>
             {   

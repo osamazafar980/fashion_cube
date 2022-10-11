@@ -146,7 +146,11 @@ export default function Dashboard() {
                 id='imgLogo'
                 src='https://previews.123rf.com/images/butenkow/butenkow1612/butenkow161201222/67326357-template-design-logo-fashion-vector-illustration-of-icon.jpg'
             />
-            <h1>Fashion Cube Store</h1>
+            <h1
+            onClick={()=>{
+                navigate('/')
+            }}
+            >Fashion Cube Store</h1>
             <p id='navMainProfileButton'
                     onClick={async ()=>{
                         if(email==undefined){
