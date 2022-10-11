@@ -7,6 +7,7 @@ export default function Product() {
     var {username,email,id} = useParams();
     const[products,setProducts] = useState([])
     const[newComment,setNewComment] = useState('')
+    const [cart,setCart] = useState([]);
     const[total,setTotal] = useState(0)
     useEffect(()=>{
         async function getData(){
@@ -121,7 +122,7 @@ export default function Product() {
                 <TextField id="filled-basic" 
                 label="Post New Comment" variant="filled" 
                 InputLabelProps={{
-                    style: { color: '#fff'}, 
+                    style: { color: '#000000'}, 
                  }}
                 className="register__textBox"
                 value={newComment}
@@ -134,6 +135,17 @@ export default function Product() {
                     onClick={()=>{postComment()}}
                 >Post Comment</p>
             </div>
+            <div id = 'pAddCartButton'
+                onClick={()=>{
+                        
+                        navigate('/cart/'+username+'/'+email+'/'+JSON.stringify([id]))
+                    
+                }}
+                                >
+                                
+                                    <p >Add To Cart</p>
+                                
+                                </div>
         </div>
         <div id='footer'>
             <div id="bankingLogos">

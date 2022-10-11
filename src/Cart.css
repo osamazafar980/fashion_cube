@@ -19,13 +19,13 @@
 }
 #cPName{
     font-size: 20px;
-    color: white;
+    color: black;
     font-weight: 100;
     margin-left: 4%;
 }
 #cPPrice{
     font-size: 20px;
-    color: white;
+    color: black;
     font-weight: 100;
     margin-left: 4%;
 }
@@ -39,7 +39,7 @@
 }
 #cTotalValue{
     font-size: 20px;
-    color: white;
+    color: black;
     font-weight: 400;
     margin-right: 4%;
 }

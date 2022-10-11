@@ -8,6 +8,9 @@ export default function Cart() {
     cData = JSON.parse(cData)
     const[products,setProducts] = useState([])
     const[address,setAddress] = useState('')
+    const[CreditNo ,setCreditNo] = useState('')
+    const[csv,setcsv] = useState('')
+    const[exp,setExp] = useState('')
     const[total,setTotal] = useState(0)
     useEffect(()=>{
         async function getData(){
@@ -87,11 +90,47 @@ export default function Cart() {
                 <TextField id="filled-basic" 
                 label="Address" variant="filled" 
                 InputLabelProps={{
-                    style: { color: '#fff'}, 
+                    style: { color: '#000000'}, 
                  }}
                 className="register__textBox"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
+                />
+
+            </div>
+            <div id='cAddress'>
+                <TextField id="filled-basic" 
+                label="Credit Card Number" variant="filled" 
+                InputLabelProps={{
+                    style: { color: '#000000'}, 
+                 }}
+                className="register__textBox"
+                value={CreditNo}
+                onChange={(e) => setCreditNo(e.target.value)}
+                />
+
+            </div>
+            <div id='cAddress'>
+                <TextField id="filled-basic" 
+                label="CVS" variant="filled" 
+                InputLabelProps={{
+                    style: { color: '#000000'}, 
+                 }}
+                className="register__textBox"
+                value={csv}
+                onChange={(e) => setcsv(e.target.value)}
+                />
+
+            </div>
+            <div id='cAddress'>
+                <TextField id="filled-basic" 
+                label="Expiery Date" variant="filled" 
+                InputLabelProps={{
+                    style: { color: '#000000'}, 
+                 }}
+                className="register__textBox"
+                value={exp}
+                onChange={(e) => setExp(e.target.value)}
                 />
 
             </div>

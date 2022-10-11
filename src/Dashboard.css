@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #153084;
+  background-color: #ffffff;
   align-items: center;
 }
 .navBarMain{
@@ -13,7 +13,7 @@
     padding: 10px 0px 10px 0px;
     align-self: center;
     justify-content: center;
-    color: #153084;
+    color: #000000;
     align-items: center;
 }
 .navBar{
@@ -23,7 +23,7 @@
     padding: 10px 0px 10px 0px;
     align-self: center;
     justify-content: center;
-    color: #153084;
+    color: #000000;
     align-items: center;
 }
 .navBarMain h1{
@@ -35,7 +35,7 @@
     margin-right: 5%;
     background-color: #f68a15;
     padding: 1% 2% 1% 2% ;
-    color: white;
+    color: black;
     width: 10%;
     text-align: center
 }
@@ -54,7 +54,7 @@
 }
 .dashL p{
     width: 100%;
-    color: white;
+    color: black;
     font-size: 16px;
     text-align: center;
     font-weight: 100;
@@ -107,7 +107,7 @@
     margin-right: 5%;
     background-color: #f68a15;
     padding: 2% 4% 2% 4% ;
-    color: white;
+    color: black;
     width: fit-content;
     text-align: center
 }
@@ -118,7 +118,7 @@
 .dashR{
     display: flex;
     flex-direction: column;
-    color: white;
+    color: black;
     width: 100%;
 }
 #dashRHead{
@@ -170,8 +170,9 @@
     align-items: center;
     width: 100%;
     justify-content: center;
-    background-color: black;
+    background-color: #153084;
     border: 1px solid #ffffff40;
+    color:white;
     margin-top: 20px;
 }
 #pTypeButton:hover{

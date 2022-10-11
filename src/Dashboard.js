@@ -211,7 +211,7 @@ export default function Dashboard() {
                     <div id='filterBox'>
                     <TextField id="filled-basic"
                     InputLabelProps={{
-                        style: { color: '#fff'}, 
+                        style: { color: '#000000'}, 
                     }}    
                     label="Price Limit" variant="filled" 
                     className="login__textBox"
