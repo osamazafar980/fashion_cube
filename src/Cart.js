@@ -8,6 +8,8 @@ export default function Cart() {
     cData = JSON.parse(cData)
     const[products,setProducts] = useState([])
     const[address,setAddress] = useState('')
+    const[fname,setFname] = useState('')
+    const[lname,setLname] = useState('')
     const[CreditNo ,setCreditNo] = useState('')
     const[csv,setcsv] = useState('')
     const[exp,setExp] = useState('')
@@ -46,6 +48,8 @@ export default function Cart() {
                 'Content-Type' : 'application/json',
             },
             body:JSON.stringify({
+                fname:fname,
+                lname:lname,
                 email:email,
                 totalPrice:total,
                 order:cData,
@@ -90,6 +94,29 @@ export default function Cart() {
                     )
                 })
             }
+            
+            <div id='cAddress'>
+                <TextField id="filled-basic" 
+                label="First Name" variant="filled" 
+                InputLabelProps={{
+                    style: { color: '#000000'}, 
+                 }}
+                className="register__textBox"
+                value={fname}
+                onChange={(e) => setFname(e.target.value)}
+                />
+            </div>
+            <div id='cAddress'>
+                <TextField id="filled-basic" 
+                label="Last  Name" variant="filled" 
+                InputLabelProps={{
+                    style: { color: '#000000'}, 
+                 }}
+                className="register__textBox"
+                value={lname}
+                onChange={(e) => setLname(e.target.value)}
+                />
+            </div>
             <div id='cAddress'>
                 <TextField id="filled-basic" 
                 label="Address" variant="filled" 
@@ -159,7 +186,8 @@ export default function Cart() {
                 <img src="https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-facebook-512.png"/>
                 <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png"/>
                 <img src="https://cdn-icons-png.flaticon.com/512/81/81609.png"/>
-                <img src="https://cdn-icons-png.flaticon.com/512/48/48968.png"/>
+                <a href='https://api.whatsapp.com/send?phone=+92300########'><img src="https://static.vecteezy.com/system/resources/previews/002/534/047/original/social-media-whatsapp-black-logo-mobile-app-icon-free-free-vector.jpg"/>
+                </a>
             </div>
         </div>
     </div>

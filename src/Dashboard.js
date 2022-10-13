@@ -99,7 +99,7 @@ export default function Dashboard() {
         "https://t4.ftcdn.net/jpg/04/60/99/63/360_F_460996349_bIzl423o41oLdi5hJIgNT3OD8SViuo9i.jpg",
         "https://i0.wp.com/www.lasercutjewelry.net/wp-content/uploads/2013/10/keychain-2.jpg?fit=3600%2C2700&ssl=1",
         "https://ae01.alicdn.com/kf/H21c4ce82ad964b6a901270d13bc61fc0Z/Forsining-3d-Logo-Design-Hollow-Engraving-Black-Gold-Case-Leather-Skeleton-Mechanical-Watches-Men-Luxury-Brand.jpg_Q90.jpg_.webp",
-        "https://www.creativefabrica.com/wp-content/uploads/2018/11/Glasses-Logo-by-Friendesign-Acongraphic-1.jpg"
+        "https://www.logocowboy.com/wp-content/uploads/2016/03/cleverLC.png"
     ]
   useEffect(()=>{
         fetch('http://localhost:1337/api/getAllProducts',{
@@ -353,7 +353,8 @@ export default function Dashboard() {
                 <img src="https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-facebook-512.png"/>
                 <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png"/>
                 <img src="https://cdn-icons-png.flaticon.com/512/81/81609.png"/>
-                <img src="https://cdn-icons-png.flaticon.com/512/48/48968.png"/>
+                <a href='https://api.whatsapp.com/send?phone=+92300########'><img src="https://static.vecteezy.com/system/resources/previews/002/534/047/original/social-media-whatsapp-black-logo-mobile-app-icon-free-free-vector.jpg"/>
+                </a>
             </div>
         </div>
     </div>

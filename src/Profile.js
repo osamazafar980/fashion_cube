@@ -114,7 +114,8 @@ export default function Profile() {
                 <img src="https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-facebook-512.png"/>
                 <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png"/>
                 <img src="https://cdn-icons-png.flaticon.com/512/81/81609.png"/>
-                <img src="https://cdn-icons-png.flaticon.com/512/48/48968.png"/>
+                <a href='https://api.whatsapp.com/send?phone=+92300########'><img src="https://static.vecteezy.com/system/resources/previews/002/534/047/original/social-media-whatsapp-black-logo-mobile-app-icon-free-free-vector.jpg"/>
+                </a>
             </div>
         </div>
     </div>
